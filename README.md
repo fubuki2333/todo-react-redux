@@ -1,4 +1,4 @@
-#基于React和Redux开发的Todo应用
+# 基于React和Redux开发的Todo应用
 
 ## 简介
 
