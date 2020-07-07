@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 
 import {FilterTypes} from "../../constants";
+import Link from "./link";
 
 export default class Filters extends Component{
     render(){
@@ -9,13 +10,13 @@ export default class Filters extends Component{
                 <span className="todo-count"><strong>0</strong> 项未完成</span>
                 <ul className="filters">
                     <li>
-                        <a className="selected" href="#/">全部</a>
+                        <Link filter={FilterTypes.ALL}>{FilterTypes.ALL}</Link>
                     </li>
                     <li>
-                        <a href="#/active">未完成</a>
+                        <Link filter={FilterTypes.UNCOMPLETED}>{FilterTypes.UNCOMPLETED}</Link>
                     </li>
                     <li>
-                        <a href="#/completed">已完成</a>
+                        <Link filter={FilterTypes.COMPLETED}>{FilterTypes.COMPLETED}</Link>
                     </li>
                 </ul>
                 <button className="clear-completed">清空已完成</button>
@@ -23,3 +24,5 @@ export default class Filters extends Component{
         )
     }
 }
+
+// Filters.componentDidMount()
